@@ -3,7 +3,7 @@ services:
   rails:
 #     image: ${DOCKER_IMAGE_NAMESPACE}/ruby
       image: ruby
-#     user: ${USER_ID}:${GROUP_ID}
+    user: ${USER_ID}:${GROUP_ID}
     build: ./images/ruby
     volumes:
       - ./src:/opt/src
@@ -28,7 +28,7 @@ services:
   yarn:
 #     image: ${DOCKER_IMAGE_NAMESPACE}/yarn
     image: yarn
-#     user: ${USER_ID}:${GROUP_ID}
+    user: ${USER_ID}:${GROUP_ID}
     build: ./images/yarn
     volumes:
       - ./src:/opt/src
