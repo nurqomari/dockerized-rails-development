@@ -1,8 +1,9 @@
 version: '3'
 services:
   rails:
-    image: ${DOCKER_IMAGE_NAMESPACE}/ruby
-    user: ${USER_ID}:${GROUP_ID}
+#     image: ${DOCKER_IMAGE_NAMESPACE}/ruby
+      image: ruby
+#     user: ${USER_ID}:${GROUP_ID}
     build: ./images/ruby
     volumes:
       - ./src:/opt/src
@@ -25,8 +26,9 @@ services:
     depends_on:
       - database
   yarn:
-    image: ${DOCKER_IMAGE_NAMESPACE}/yarn
-    user: ${USER_ID}:${GROUP_ID}
+#     image: ${DOCKER_IMAGE_NAMESPACE}/yarn
+    image: yarn
+#     user: ${USER_ID}:${GROUP_ID}
     build: ./images/yarn
     volumes:
       - ./src:/opt/src
